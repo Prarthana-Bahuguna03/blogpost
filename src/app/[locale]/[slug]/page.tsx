@@ -1,5 +1,3 @@
-export const dynamic = 'force-dynamic';
-export const dynamicParams = true;
 import type { Metadata } from 'next';
 import { draftMode } from 'next/headers';
 import { notFound } from 'next/navigation';
