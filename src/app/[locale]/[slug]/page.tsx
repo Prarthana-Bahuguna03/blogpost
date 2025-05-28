@@ -53,6 +53,9 @@ export async function generateStaticParams({
     throw new Error('No blog posts found');
   }
 
+  console.log('generateStaticParams slugs:', pageBlogPostCollection?.items.map(item => item.slug));
+
+
   return pageBlogPostCollection.items
     .filter((blogPost): blogPost is NonNullable<typeof blogPost> => Boolean(blogPost?.slug))
     .map(blogPost => {
